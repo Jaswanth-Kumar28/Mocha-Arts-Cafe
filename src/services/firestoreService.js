@@ -1,4 +1,4 @@
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 
 export async function saveTableBooking(data) {
@@ -23,4 +23,22 @@ export async function saveContactMessage(data) {
     status: "new",
     createdAt: serverTimestamp()
   });
+}
+
+export async function getTableBookings() {
+  const q = query(collection(db, "tableBookings"), orderBy("createdAt", "desc"));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+}
+
+export async function getBirthdayBookings() {
+  const q = query(collection(db, "birthdayBookings"), orderBy("createdAt", "desc"));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+}
+
+export async function getContactMessages() {
+  const q = query(collection(db, "contactMessages"), orderBy("createdAt", "desc"));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 }
