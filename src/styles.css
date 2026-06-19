@@ -89,13 +89,13 @@ img {
   font-size: 1.05rem;
 }
 
-.logo-mark {
-  width: 38px;
-  height: 38px;
+.logo-img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  object-fit: cover;
+  border: 1.5px solid var(--brand);
+  background: white;
 }
 
 .nav {
@@ -104,8 +104,7 @@ img {
   align-items: center;
 }
 
-.nav-link,
-.footer button {
+.nav-link {
   color: var(--muted);
   background: transparent;
   border: 0;
@@ -114,8 +113,7 @@ img {
 }
 
 .nav-link.active,
-.nav-link:hover,
-.footer button:hover {
+.nav-link:hover {
   color: var(--text);
   background: rgba(217, 153, 74, 0.16);
 }
@@ -171,8 +169,20 @@ img {
 }
 
 .hero {
-  padding: 80px 0 60px;
+  padding: 100px 0 80px;
+  background: radial-gradient(circle at top left, #2b1810 0%, #0a0604 80%);
+  border-bottom: 1px solid var(--border);
 }
+
+.hero-image {
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+
 
 .hero-grid,
 .two-column {
@@ -324,7 +334,6 @@ p {
 .reviews,
 .price-grid,
 .menu-grid,
-.gallery-grid,
 .footer-grid {
   display: grid;
   gap: 20px;
@@ -515,30 +524,6 @@ p {
   accent-color: var(--brand);
 }
 
-.gallery-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery-item {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 24px;
-  overflow: hidden;
-  padding: 0;
-  text-align: left;
-}
-
-.gallery-item img {
-  height: 230px;
-  object-fit: cover;
-}
-
-.gallery-item span {
-  display: block;
-  padding: 16px;
-  font-weight: 900;
-}
 
 .faq-wrap .section-intro {
   padding-bottom: 10px;
@@ -563,18 +548,46 @@ p {
 
 .footer {
   border-top: 1px solid var(--border);
-  padding: 44px 0 20px;
-  background: rgba(0,0,0,0.18);
+  padding: 60px 0 30px;
+  background: rgba(0,0,0,0.24);
 }
 
 .footer-grid {
-  grid-template-columns: 1.4fr 0.8fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.footer-grid h4 {
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.footer-grid p {
+  margin: 0;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .footer button {
   display: block;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  padding: 6px 0;
   text-align: left;
-  padding-left: 0;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.footer button:hover {
+  color: var(--brand);
+  background: transparent;
+  transform: translateX(4px);
 }
 
 .footer-bottom {
@@ -617,19 +630,7 @@ p {
   position: relative;
 }
 
-.lightbox-card {
-  width: min(900px, 100%);
-  position: relative;
-}
 
-.lightbox-card img {
-  max-height: 72vh;
-  object-fit: cover;
-}
-
-.lightbox-card h3 {
-  padding: 18px 22px;
-}
 
 .modal-close {
   position: absolute;
@@ -685,8 +686,7 @@ p {
   .feature-grid,
   .reviews,
   .price-grid,
-  .menu-grid,
-  .gallery-grid {
+  .menu-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -709,7 +709,6 @@ p {
   .reviews,
   .price-grid,
   .menu-grid,
-  .gallery-grid,
   .stats {
     grid-template-columns: 1fr;
   }
@@ -981,3 +980,28 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- Demo Mode Banner --- */
+.demo-banner {
+  background: linear-gradient(135deg, rgba(217, 153, 74, 0.16), rgba(217, 153, 74, 0.04));
+  border: 1px solid rgba(217, 153, 74, 0.35);
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo-banner code {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--brand);
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+

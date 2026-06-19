@@ -3,26 +3,15 @@ import menuData from "./data/menuData.json";
 import {
   saveTableBooking,
   saveBirthdayBooking,
-  saveContactMessage,
-  getTableBookings,
-  getBirthdayBookings,
-  getContactMessages
+  saveContactMessage
 } from "./services/firestoreService";
-import {
-  loginWithEmail,
-  signUpWithEmail,
-  logoutUser,
-  onAuthStateSubscription
-} from "./services/authService";
 
 const navItems = [
   { id: "home", label: "Home" },
   { id: "menu", label: "Menu" },
   { id: "booking", label: "Book a Table" },
   { id: "birthdays", label: "Birthdays" },
-  { id: "gallery", label: "Gallery" },
-  { id: "contact", label: "Contact" },
-  { id: "admin", label: "Staff Portal" }
+  { id: "contact", label: "Contact" }
 ];
 
 const imageMap = {
@@ -37,53 +26,12 @@ const imageMap = {
   "Burritos & Bowls": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=900"
 };
 
-const galleryItems = [
-  {
-    title: "Craft Coffee",
-    category: "Cafe Vibe",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=900"
-  },
-  {
-    title: "Cozy Spaces",
-    category: "Cafe Vibe",
-    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=900"
-  },
-  {
-    title: "Sip & Paint",
-    category: "Art & Workshops",
-    image: "/assets/paint.png"
-  },
-  {
-    title: "Artisan Pasta",
-    category: "Gourmet Plates",
-    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=900"
-  },
-  {
-    title: "Latte Art",
-    category: "Cafe Vibe",
-    image: "/assets/latte.png"
-  },
-  {
-    title: "Birthday Setup",
-    category: "Cafe Vibe",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=900"
-  }
-];
 
 function App() {
   const [activePage, setActivePage] = useState("home");
   const [isLight, setIsLight] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [modal, setModal] = useState(null);
-  const [lightbox, setLightbox] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateSubscription((user) => {
-      setCurrentUser(user);
-    });
-    return () => unsubscribe();
-  }, []);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("mocha-cafe-theme");
@@ -117,22 +65,13 @@ function App() {
         {activePage === "menu" && <MenuPage />}
         {activePage === "booking" && <BookingPage setModal={setModal} />}
         {activePage === "birthdays" && <BirthdaysPage setModal={setModal} />}
-        {activePage === "gallery" && <GalleryPage setLightbox={setLightbox} />}
         {activePage === "contact" && <ContactPage setModal={setModal} />}
-        {activePage === "admin" && (
-          currentUser ? (
-            <DashboardPage currentUser={currentUser} setModal={setModal} />
-          ) : (
-            <LoginPage setModal={setModal} />
-          )
-        )}
       </main>
 
       <Footer goToPage={goToPage} />
       <FloatingWhatsApp />
 
       {modal && <SuccessModal modal={modal} close={() => setModal(null)} />}
-      {lightbox && <Lightbox item={lightbox} close={() => setLightbox(null)} />}
     </>
   );
 }
@@ -142,7 +81,7 @@ function Header({ activePage, goToPage, isLight, setIsLight, mobileOpen, setMobi
     <header className="header">
       <div className="container nav-wrap">
         <button className="logo" onClick={() => goToPage("home")}>
-          <span className="logo-mark">☕</span>
+          <img src="/images/logo.jpg" alt="Mocha Arts Cafe Logo" className="logo-img" />
           <span>Mocha Arts Cafe</span>
         </button>
 
@@ -191,8 +130,9 @@ function HomePage({ goToPage }) {
           </div>
           <div className="hero-card">
             <img
-              src="/assets/hero.png"
-              alt="Cafe interior"
+              src="/images/mocha-cafe-hero.jpg"
+              alt="Mocha Arts Cafe interior"
+              className="hero-image"
             />
           </div>
         </div>
@@ -511,31 +451,6 @@ function BirthdaysPage({ setModal }) {
   );
 }
 
-function GalleryPage({ setLightbox }) {
-  const [filter, setFilter] = useState("All Photos");
-  const filters = ["All Photos", "Cafe Vibe", "Gourmet Plates", "Art & Workshops"];
-  const filtered = filter === "All Photos" ? galleryItems : galleryItems.filter((item) => item.category === filter);
-
-  return (
-    <section className="page-section active page-padding">
-      <SectionIntro eyebrow="Aesthetic Corner" title="Our Photo Gallery" text="Get a visual taste of artisan plates, curated coffee and elegant cafe interiors." />
-      <div className="container chip-row centered">
-        {filters.map((item) => (
-          <button key={item} className={filter === item ? "chip active" : "chip"} onClick={() => setFilter(item)}>{item}</button>
-        ))}
-      </div>
-      <div className="container gallery-grid">
-        {filtered.map((item) => (
-          <button className="gallery-item" key={item.title} onClick={() => setLightbox(item)}>
-            <img src={item.image} alt={item.title} />
-            <span>{item.title}</span>
-          </button>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function ContactPage({ setModal }) {
   async function handleSubmit(e) {
     e.preventDefault();
@@ -570,7 +485,7 @@ function ContactPage({ setModal }) {
           <h3>Mocha Arts Cafe</h3>
           <p>Refined. Roasted. Remarkable.</p>
           <ul className="contact-list">
-            <li><strong>Address:</strong> Plot No. 9, Art District Lane, Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</li>
+            <li><strong>Address:</strong> Ground Floor, 17-1-389/18-B, Prashanth Nagar Colony, Circle 7, Near Tony & Guy Essensuals, Saidabad (Saroor Nagar), Hyderabad, Telangana 500059, India.</li>
             <li><strong>Phone:</strong> +91 75690 87801</li>
             <li><strong>Email:</strong> mochaartcafe.9@gmail.com</li>
           </ul>
@@ -662,19 +577,18 @@ function Footer({ goToPage }) {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <h3>Mocha Arts Cafe</h3>
+          <h4>Mocha Arts Cafe</h4>
           <p>Bringing together single-origin brews, gourmet plates and creative cafe experiences.</p>
         </div>
         <div>
           <h4>Navigation</h4>
           {navItems.map((item) => <button key={item.id} onClick={() => goToPage(item.id)}>{item.label}</button>)}
-          <button onClick={() => goToPage("admin")} style={{ display: "block", marginTop: "12px", color: "var(--brand)", fontWeight: "bold", paddingLeft: 0 }}>Staff Portal</button>
         </div>
         <div>
           <h4>Quick Contact</h4>
           <p>+91 75690 87801</p>
           <p>mochaartcafe.9@gmail.com</p>
-          <p>Jubilee Hills, Hyderabad</p>
+          <p>Saidabad, Hyderabad</p>
         </div>
       </div>
       <div className="footer-bottom">© 2026 Mocha Arts Cafe. All Rights Reserved.</div>
@@ -699,317 +613,6 @@ function SuccessModal({ modal, close }) {
   );
 }
 
-function Lightbox({ item, close }) {
-  return (
-    <div className="modal active" onClick={close}>
-      <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={close}>×</button>
-        <img src={item.image} alt={item.title} />
-        <h3>{item.title}</h3>
-      </div>
-    </div>
-  );
-}
-
-function LoginPage({ setModal }) {
-  const [isLoginTab, setIsLoginTab] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  async function handleAuthSubmit(e) {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-
-    try {
-      if (isLoginTab) {
-        await loginWithEmail(email, password);
-        setModal({
-          title: "Welcome Back!",
-          text: "You have successfully logged in to the Staff Portal."
-        });
-      } else {
-        await signUpWithEmail(email, password);
-        setModal({
-          title: "Account Created!",
-          text: "Your staff account has been successfully registered. Welcome aboard!"
-        });
-      }
-    } catch (err) {
-      console.error("Auth error:", err);
-      let errMsg = "An error occurred during authentication. Please check your credentials.";
-      if (err.code === "auth/user-not-found" || err.code === "auth/invalid-credential") errMsg = "Invalid email or password.";
-      else if (err.code === "auth/wrong-password") errMsg = "Incorrect password.";
-      else if (err.code === "auth/email-already-in-use") errMsg = "This email is already registered.";
-      else if (err.code === "auth/weak-password") errMsg = "Password must be at least 6 characters.";
-      else if (err.code === "auth/invalid-email") errMsg = "Please enter a valid email address.";
-      setError(errMsg);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  return (
-    <section className="page-section active">
-      <div className="login-split">
-        <div className="login-photo"></div>
-        <div className="login-form-panel">
-          <div className="login-card">
-            <h2>Staff Portal</h2>
-            <p className="subtitle">Manage Mocha Arts Cafe Bookings</p>
-
-            <div className="auth-tabs">
-              <button
-                className={isLoginTab ? "auth-tab active" : "auth-tab"}
-                onClick={() => { setIsLoginTab(true); setError(""); }}
-              >
-                Sign In
-              </button>
-              <button
-                className={!isLoginTab ? "auth-tab active" : "auth-tab"}
-                onClick={() => { setIsLoginTab(false); setError(""); }}
-              >
-                Register
-              </button>
-            </div>
-
-            {error && <div className="error-message">{error}</div>}
-
-            <form onSubmit={handleAuthSubmit}>
-              <label>
-                Email Address *
-                <input
-                  type="email"
-                  placeholder="name@mochaartscafe.com"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </label>
-              <label>
-                Password *
-                <input
-                  type="password"
-                  placeholder="••••••••"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </label>
-              <button className="primary-btn" type="submit" disabled={loading}>
-                {loading ? "Processing..." : isLoginTab ? "Sign In" : "Register Staff Account"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function DashboardPage({ currentUser, setModal }) {
-  const [activeTab, setActiveTab] = useState("bookings");
-  const [bookings, setBookings] = useState([]);
-  const [birthdays, setBirthdays] = useState([]);
-  const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  async function loadData() {
-    setLoading(true);
-    try {
-      const [bookingsData, birthdaysData, messagesData] = await Promise.all([
-        getTableBookings(),
-        getBirthdayBookings(),
-        getContactMessages()
-      ]);
-      setBookings(bookingsData);
-      setBirthdays(birthdaysData);
-      setMessages(messagesData);
-    } catch (error) {
-      console.error("Failed to load dashboard data:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  async function handleLogout() {
-    try {
-      await logoutUser();
-      setModal({
-        title: "Signed Out",
-        text: "You have safely signed out of the Staff Portal."
-      });
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
-  }
-
-  return (
-    <section className="page-section active page-padding">
-      <div className="container dashboard-section">
-        <div className="dashboard-header">
-          <div>
-            <h2>Staff Admin Dashboard</h2>
-            <p>Logged in as: <strong>{currentUser.email}</strong></p>
-          </div>
-          <div style={{ display: 'flex', gap: '10px' }}>
-            <button className="outline-btn small" onClick={loadData}>🔄 Refresh</button>
-            <button className="primary-btn small" onClick={handleLogout}>Logout</button>
-          </div>
-        </div>
-
-        <div className="dashboard-metrics">
-          <div className="metric-card">
-            <div className="metric-info">
-              <h3>{bookings.length}</h3>
-              <span>Table Bookings</span>
-            </div>
-            <span className="metric-icon">🍽️</span>
-          </div>
-          <div className="metric-card">
-            <div className="metric-info">
-              <h3>{birthdays.length}</h3>
-              <span>Birthday Events</span>
-            </div>
-            <span className="metric-icon">🎂</span>
-          </div>
-          <div className="metric-card">
-            <div className="metric-info">
-              <h3>{messages.length}</h3>
-              <span>Contact Inquiries</span>
-            </div>
-            <span className="metric-icon">💬</span>
-          </div>
-        </div>
-
-        <div className="dashboard-tabs">
-          <button
-            className={activeTab === "bookings" ? "dashboard-tab active" : "dashboard-tab"}
-            onClick={() => setActiveTab("bookings")}
-          >
-            Table Reservations ({bookings.length})
-          </button>
-          <button
-            className={activeTab === "birthdays" ? "dashboard-tab active" : "dashboard-tab"}
-            onClick={() => setActiveTab("birthdays")}
-          >
-            Birthday Celebrations ({birthdays.length})
-          </button>
-          <button
-            className={activeTab === "messages" ? "dashboard-tab active" : "dashboard-tab"}
-            onClick={() => setActiveTab("messages")}
-          >
-            Contact Messages ({messages.length})
-          </button>
-        </div>
-
-        {loading ? (
-          <div className="loading-spinner">
-            <span>☕ Loading records...</span>
-          </div>
-        ) : (
-          <div className="dashboard-table-wrap">
-            {activeTab === "bookings" && (
-              bookings.length === 0 ? (
-                <div className="empty-state">No table reservations found.</div>
-              ) : (
-                <table className="dashboard-table">
-                  <thead>
-                    <tr>
-                      <th>Customer</th>
-                      <th>Phone</th>
-                      <th>Email</th>
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Guests</th>
-                      <th>Zone</th>
-                      <th>Requests</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {bookings.map((item) => (
-                      <tr key={item.id}>
-                        <td><strong>{item.name}</strong></td>
-                        <td>{item.phone}</td>
-                        <td>{item.email || "-"}</td>
-                        <td>{item.date}</td>
-                        <td>{item.time}</td>
-                        <td>{item.guests}</td>
-                        <td>{item.zone}</td>
-                        <td>{item.requests || "-"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )
-            )}
-
-            {activeTab === "birthdays" && (
-              birthdays.length === 0 ? (
-                <div className="empty-state">No birthday bookings found.</div>
-              ) : (
-                <table className="dashboard-table">
-                  <thead>
-                    <tr>
-                      <th>Organizer</th>
-                      <th>Phone</th>
-                      <th>Date</th>
-                      <th>Package Plan</th>
-                      <th>Guests</th>
-                      <th>Special Requirements</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {birthdays.map((item) => (
-                      <tr key={item.id}>
-                        <td><strong>{item.name}</strong></td>
-                        <td>{item.phone}</td>
-                        <td>{item.date}</td>
-                        <td><span className="badge">{item.package}</span></td>
-                        <td>{item.guests}</td>
-                        <td>{item.requirements || "-"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )
-            )}
-
-            {activeTab === "messages" && (
-              messages.length === 0 ? (
-                <div className="empty-state">No contact messages found.</div>
-              ) : (
-                <table className="dashboard-table">
-                  <thead>
-                    <tr>
-                      <th>Sender</th>
-                      <th>Email</th>
-                      <th>Message</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {messages.map((item) => (
-                      <tr key={item.id}>
-                        <td><strong>{item.name}</strong></td>
-                        <td>{item.email}</td>
-                        <td>{item.message}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )
-            )}
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}
 
 export default App;
+
