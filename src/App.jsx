@@ -21,7 +21,8 @@ const navItems = [
   { id: "booking", label: "Book a Table" },
   { id: "birthdays", label: "Birthdays" },
   { id: "gallery", label: "Gallery" },
-  { id: "contact", label: "Contact" }
+  { id: "contact", label: "Contact" },
+  { id: "admin", label: "Staff Portal" }
 ];
 
 const imageMap = {
