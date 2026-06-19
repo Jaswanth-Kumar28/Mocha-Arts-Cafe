@@ -27,11 +27,74 @@ const imageMap = {
 };
 
 
+const menuItems = [
+  {
+    title: "Coffee & Beverages",
+    text: "Freshly brewed coffee, cold coffee, mocktails, shakes, and refreshing cafe drinks.",
+    image: "/images/menu-coffee.jpg",
+    fallback: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=900"
+  },
+  {
+    title: "Snacks & Starters",
+    text: "Crispy bites, fries, sandwiches, rolls, and quick cafe-style snacks.",
+    image: "/images/menu-snacks.jpg",
+    fallback: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=900"
+  },
+  {
+    title: "Pizza & Burgers",
+    text: "Cheesy pizzas, loaded burgers, and comfort food made for friends and food lovers.",
+    image: "/images/menu-pizza.jpg",
+    fallback: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=900"
+  },
+  {
+    title: "Desserts & Specials",
+    text: "Sweet treats, cakes, brownies, and signature specials to complete your cafe experience.",
+    image: "/images/menu-dessert.jpg",
+    fallback: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=900"
+  },
+];
+
+const features = [
+  {
+    title: "Cozy Ambience",
+    text: "A warm and comfortable place to relax, talk, study, or spend time with friends.",
+  },
+  {
+    title: "Creative Vibe",
+    text: "An artistic cafe atmosphere made for students, artists, families, and coffee lovers.",
+  },
+  {
+    title: "Fresh Food",
+    text: "Tasty food and beverages prepared with care for a memorable cafe experience.",
+  },
+  {
+    title: "Perfect Hangout",
+    text: "A friendly place in Saroor Nagar to chill, celebrate, and enjoy quality moments.",
+  },
+];
+
+function SafeImage({ src, fallback, alt, className, style, onClick }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      style={style}
+      onClick={onClick}
+      onError={(e) => {
+        e.target.onerror = null;
+        e.target.src = fallback;
+      }}
+    />
+  );
+}
+
 function App() {
   const [activePage, setActivePage] = useState("home");
   const [isLight, setIsLight] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [modal, setModal] = useState(null);
+  const [lightboxItem, setLightboxItem] = useState(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("mocha-cafe-theme");
@@ -61,7 +124,7 @@ function App() {
       />
 
       <main>
-        {activePage === "home" && <HomePage goToPage={goToPage} />}
+        {activePage === "home" && <HomePage goToPage={goToPage} setLightboxItem={setLightboxItem} />}
         {activePage === "menu" && <MenuPage />}
         {activePage === "booking" && <BookingPage setModal={setModal} />}
         {activePage === "birthdays" && <BirthdaysPage setModal={setModal} />}
@@ -72,6 +135,7 @@ function App() {
       <FloatingWhatsApp />
 
       {modal && <SuccessModal modal={modal} close={() => setModal(null)} />}
+      {lightboxItem && <Lightbox item={lightboxItem} close={() => setLightboxItem(null)} />}
     </>
   );
 }
@@ -111,61 +175,172 @@ function Header({ activePage, goToPage, isLight, setIsLight, mobileOpen, setMobi
   );
 }
 
-function HomePage({ goToPage }) {
+function HomePage({ goToPage, setLightboxItem }) {
   return (
     <section className="page-section active page-padding">
       <div className="hero">
-        <div className="container hero-grid">
-          <div>
-            <p className="eyebrow">Refined. Roasted. Remarkable.</p>
-            <h1>Welcome to Mocha Arts Cafe</h1>
-            <p className="hero-quote">“Every Bite & Sip Has a Story”</p>
-            <p className="hero-text">
-              A creative cafe where specialty coffee, gourmet food, art events, co-working and celebrations come together.
-            </p>
-            <div className="hero-actions">
-              <button className="primary-btn" onClick={() => goToPage("menu")}>View Menu</button>
-              <button className="outline-btn" onClick={() => goToPage("booking")}>Book a Table</button>
+        <div className="heroOverlay"></div>
+
+        <div className="heroContent">
+          <p className="smallText">Enjoy the multicuisine cafe experience!</p>
+          <h1>
+            Where Coffee <br />
+            Meets Creativity
+          </h1>
+          <p className="heroPara">
+            A cozy and artistic cafe in Saidabad, Saroor Nagar, Hyderabad, made for food,
+            coffee, friends, and unforgettable moments.
+          </p>
+
+          <div className="heroButtons">
+            <a href="#menu" onClick={(e) => { e.preventDefault(); goToPage("menu"); }} className="primaryBtn">
+              View Menu
+            </a>
+            <a href="#visit" onClick={(e) => { e.preventDefault(); goToPage("contact"); }} className="secondaryBtn">
+              Visit Us
+            </a>
+          </div>
+        </div>
+
+        <div className="heroCard">
+          <h3>Mocha Arts Cafe</h3>
+          <p>Premium coffee • Tasty food • Artistic ambience</p>
+        </div>
+      </div>
+
+      <section className="about section">
+        <div className="aboutImage">
+          <SafeImage 
+            src="/images/about-cafe.jpg" 
+            fallback="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200" 
+            alt="Mocha Arts Cafe ambience" 
+          />
+        </div>
+
+        <div className="aboutText">
+          <p className="sectionTag">About Us</p>
+          <h2>Mocha Arts Cafe is a creative cafe experience</h2>
+          <p>
+            Mocha Arts Cafe is a cozy and modern cafe located in Saidabad, Saroor Nagar,
+            Hyderabad. It is a place where coffee lovers, students, friends,
+            artists, and families can relax, enjoy delicious food, and spend
+            quality time together.
+          </p>
+          <p>
+            With a warm cafe theme, artistic interiors, and a friendly
+            atmosphere, Mocha Arts Cafe is designed to be more than just a food
+            spot. It is a hangout space where taste, comfort, and creativity come
+            together.
+          </p>
+
+          <div className="stats">
+            <div>
+              <h3>Fresh</h3>
+              <span>Food & Drinks</span>
+            </div>
+            <div>
+              <h3>Cozy</h3>
+              <span>Ambience</span>
+            </div>
+            <div>
+              <h3>Creative</h3>
+              <span>Cafe Vibe</span>
             </div>
           </div>
-          <div className="hero-card">
-            <img
-              src="/images/mocha-cafe-hero.jpg"
-              alt="Mocha Arts Cafe interior"
-              className="hero-image"
-            />
+        </div>
+      </section>
+
+      <section className="section menuSection">
+        <p className="sectionTag center">Our Menu</p>
+        <h2 className="centerTitle">The Pleasure of Variety on Your Plate</h2>
+
+        <div className="menuGrid">
+          {menuItems.map((item, index) => (
+            <div className="menuCard" key={index}>
+              <SafeImage src={item.image} fallback={item.fallback} alt={item.title} />
+              <div className="menuInfo">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <a href="#menu" onClick={(e) => { e.preventDefault(); goToPage("menu"); }}>View More</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="whyChoose">
+        <div className="section">
+          <p className="sectionTag center">Why Choose Us</p>
+          <h2 className="centerTitle">Why Choose Mocha Arts Cafe</h2>
+
+          <div className="featureGrid">
+            {features.map((item, index) => (
+              <div className="featureCard" key={index}>
+                <div className="featureIcon">{index + 1}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      <SectionIntro eyebrow="Our Story" title="Where Coffee Meets Fine Art" />
-      <div className="container two-column">
-        <div className="text-card">
+      <section className="section gallerySection">
+        <p className="sectionTag center">Gallery</p>
+        <h2 className="centerTitle">Experience a Soothing and Memorable Day</h2>
+
+        <div className="galleryGrid">
+          <SafeImage 
+            src="/images/gallery-1.jpg" 
+            fallback="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" 
+            alt="Cafe seating" 
+            style={{ cursor: "pointer" }} 
+            onClick={() => setLightboxItem({ image: "/images/gallery-1.jpg", fallback: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800", title: "Cafe Seating" })} 
+          />
+          <SafeImage 
+            src="/images/gallery-2.jpg" 
+            fallback="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" 
+            alt="Cafe food" 
+            style={{ cursor: "pointer" }} 
+            onClick={() => setLightboxItem({ image: "/images/gallery-2.jpg", fallback: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800", title: "Cafe Food" })} 
+          />
+          <SafeImage 
+            src="/images/gallery-3.jpg" 
+            fallback="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" 
+            alt="Cafe coffee" 
+            style={{ cursor: "pointer" }} 
+            onClick={() => setLightboxItem({ image: "/images/gallery-3.jpg", fallback: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800", title: "Cafe Coffee" })} 
+          />
+          <SafeImage 
+            src="/images/gallery-4.jpg" 
+            fallback="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800" 
+            alt="Cafe interior" 
+            style={{ cursor: "pointer" }} 
+            onClick={() => setLightboxItem({ image: "/images/gallery-4.jpg", fallback: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800", title: "Cafe Interior" })} 
+          />
+        </div>
+      </section>
+
+      <section className="experience">
+        <div>
+          <p className="sectionTag">Cafe Experience</p>
+          <h2>Relax, Eat, Sip, and Create Memories</h2>
           <p>
-            Mocha Arts Cafe is a cozy destination for coffee lovers, food explorers and creative people. The cafe brings together fresh beverages, gourmet plates and an aesthetic art-gallery atmosphere.
+            Whether you are planning a casual meet-up, a study break, a family
+            outing, or a peaceful coffee moment, Mocha Arts Cafe gives you the
+            perfect setting with warm lights, delicious food, and a premium cafe
+            feel.
           </p>
-          <div className="stats">
-            <div><strong>100%</strong><span>Artisan Beans</span></div>
-            <div><strong>500+</strong><span>Artworks Hosted</span></div>
-            <div><strong>7 Days</strong><span>Open Weekly</span></div>
-          </div>
         </div>
-        <div className="image-panel">
-          <img src="https://images.unsplash.com/photo-1507914464562-6ff4ac29692f?auto=format&fit=crop&q=80&w=1200" alt="Coffee and art" />
-        </div>
-      </div>
 
-      <SectionIntro eyebrow="Craftsmanship" title="Why Choose Mocha Arts Cafe" />
-      <div className="container feature-grid">
-        <Feature icon="☕" title="Specialty Brews" text="Single-origin roasts, signature lattes and custom slow-drip coffee." />
-        <Feature icon="🎨" title="Art & Culture Vibe" text="Paintings, canvas displays and weekly creative activities." />
-        <Feature icon="🍝" title="Gourmet Kitchen" text="Freshly prepared starters, pastas, pizzas, burgers and desserts." />
-        <Feature icon="💻" title="Creator Friendly" text="A calm co-working setup with Wi-Fi, charging points and cozy seating." />
-      </div>
-
+        <a href="#booking" onClick={(e) => { e.preventDefault(); goToPage("booking"); }} className="primaryBtn">
+          Plan Your Visit
+        </a>
+      </section>
     </section>
   );
 }
+
 
 function MenuPage() {
   const [category, setCategory] = useState("All");
@@ -592,6 +767,25 @@ function SuccessModal({ modal, close }) {
         <h3>{modal.title}</h3>
         <p>{modal.text}</p>
         <button className="primary-btn" onClick={close}>Close</button>
+      </div>
+    </div>
+  );
+}
+
+function Lightbox({ item, close }) {
+  return (
+    <div className="modal active" onClick={close}>
+      <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={close}>×</button>
+        <img
+          src={item.image}
+          alt={item.title}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = item.fallback;
+          }}
+        />
+        <h3>{item.title}</h3>
       </div>
     </div>
   );
