@@ -1,5 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import menuData from "./data/menuData.json";
+import {
+  saveTableBooking,
+  saveBirthdayBooking,
+  saveContactMessage
+} from "./services/firestoreService";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -322,14 +327,29 @@ function MenuCard({ item }) {
 function BookingPage({ setModal }) {
   const today = new Date().toISOString().split("T")[0];
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-    setModal({
-      title: "Table Reserved Successfully!",
-      text: `Thank you, ${data.name}! Your table reservation for ${data.guests} on ${data.date} at ${data.time} has been registered. Our team will confirm by phone at ${data.phone}.`
-    });
-    e.currentTarget.reset();
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      await saveTableBooking(data);
+
+      setModal({
+        title: "Table Reserved Successfully!",
+        text: `Thank you, ${data.name}! Your table reservation for ${data.guests} on ${data.date} at ${data.time} has been saved. Our team will confirm by phone at ${data.phone}.`
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("Booking error:", error);
+
+      setModal({
+        title: "Booking Failed",
+        text: "Something went wrong while saving your booking. Please try again."
+      });
+    }
   }
 
   return (
@@ -390,14 +410,29 @@ function BirthdaysPage({ setModal }) {
   };
   const total = plans[plan] * guests;
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-    setModal({
-      title: "Celebration Planned!",
-      text: `Thank you, ${data.name}! We received your birthday request for ${data.date}. Our events planner will contact you at ${data.phone}.`
-    });
-    e.currentTarget.reset();
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      await saveBirthdayBooking(data);
+
+      setModal({
+        title: "Celebration Planned!",
+        text: `Thank you, ${data.name}! Your birthday booking request for ${data.date} has been saved. Our events planner will contact you at ${data.phone}.`
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("Birthday booking error:", error);
+
+      setModal({
+        title: "Booking Failed",
+        text: "Something went wrong while saving your birthday request. Please try again."
+      });
+    }
   }
 
   return (
@@ -477,14 +512,29 @@ function GalleryPage({ setLightbox }) {
 }
 
 function ContactPage({ setModal }) {
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-    setModal({
-      title: "Message Sent!",
-      text: `Hello ${data.name}, thank you for writing to us. We will respond to your email at ${data.email} shortly.`
-    });
-    e.currentTarget.reset();
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      await saveContactMessage(data);
+
+      setModal({
+        title: "Message Sent!",
+        text: `Hello ${data.name}, your message has been saved. We will respond to your email at ${data.email} shortly.`
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("Contact message error:", error);
+
+      setModal({
+        title: "Message Failed",
+        text: "Something went wrong while sending your message. Please try again."
+      });
+    }
   }
 
   return (
