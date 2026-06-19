@@ -1,0 +1,19 @@
+{
+  "name": "mocha-arts-cafe-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React + Vite version of Mocha Arts Cafe website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}

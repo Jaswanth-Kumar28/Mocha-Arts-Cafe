@@ -1,0 +1,186 @@
+[
+  {
+    "id": "starters-nachos",
+    "name": "Nachos to Share",
+    "category": "Starters",
+    "price": 240,
+    "description": "Crispy house-made corn tortilla chips layered with warm cheese sauce, jalapeños, pico de gallo and sour cream.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "starters-macho-chicken-fries",
+    "name": "Macho Style Chicken French Fries",
+    "category": "Starters",
+    "price": 290,
+    "description": "Golden fries topped with grilled chicken chunks, melted cheddar, smoky BBQ drizzle and green onions.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "starters-loaded-garden-fries",
+    "name": "Loaded Garden French Fries",
+    "category": "Starters",
+    "price": 220,
+    "description": "Crispy fries with cheese sauce, bell peppers, olives, corn and fresh herbs.",
+    "type": "veg",
+    "popular": false
+  },
+  {
+    "id": "starters-butter-garlic-prawns",
+    "name": "Butter Garlic Prawns",
+    "category": "Starters",
+    "price": 380,
+    "description": "Plump prawns sautéed in butter garlic sauce with parsley and lemon.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "sides-cheese-corn-balls",
+    "name": "Cheese Corn Balls",
+    "category": "Sides",
+    "price": 180,
+    "description": "Golden croquettes stuffed with sweet corn kernels and melted mozzarella.",
+    "type": "veg",
+    "popular": false
+  },
+  {
+    "id": "sides-garlic-bread",
+    "name": "Cheesy Garlic Bread",
+    "category": "Sides",
+    "price": 160,
+    "description": "Toasted bread with garlic butter, mozzarella and Italian herbs.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "bb-paneer-burrito",
+    "name": "Paneer Burrito",
+    "category": "Burritos & Bowls",
+    "price": 240,
+    "description": "Flour tortilla wrap packed with grilled paneer, onions, peppers, rice and sour cream.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "bb-chicken-burrito-bowl",
+    "name": "Chicken Burrito Bowl",
+    "category": "Burritos & Bowls",
+    "price": 280,
+    "description": "Grilled adobo chicken, rice, beans, corn salsa and shredded cheese over crisp lettuce.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "q-paneer-quesadilla",
+    "name": "Paneer Quesadilla",
+    "category": "Quesadillas",
+    "price": 230,
+    "description": "Tandoori paneer crumbles, onions and melting mozzarella in a golden tortilla.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "momos-chicken",
+    "name": "Chicken Momos",
+    "category": "Momos",
+    "price": 180,
+    "description": "Steamed or fried dumplings stuffed with seasoned minced chicken and scallions.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "momos-veg",
+    "name": "Veg Momos",
+    "category": "Momos",
+    "price": 150,
+    "description": "Dumplings stuffed with cabbage, carrots, beans and ginger. Steamed or fried.",
+    "type": "veg",
+    "popular": false
+  },
+  {
+    "id": "pizza-margherita",
+    "name": "Classic Margherita Pizza",
+    "category": "Pizzas",
+    "price": 260,
+    "description": "Fresh tomato sauce, mozzarella, basil and olive oil on a crisp base.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "pizza-bbq-chicken",
+    "name": "BBQ Chicken Pizza",
+    "category": "Pizzas",
+    "price": 340,
+    "description": "Smoky BBQ chicken, onions, bell peppers and mozzarella cheese.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "pasta-white-sauce",
+    "name": "White Sauce Penne Pasta",
+    "category": "Pastas",
+    "price": 250,
+    "description": "Penne pasta tossed in creamy white sauce with herbs and vegetables.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "burger-chicken",
+    "name": "Premium Cheddar Chicken Burger",
+    "category": "Burgers",
+    "price": 280,
+    "description": "Crispy chicken patty, cheddar, lettuce, tomato and signature cafe sauce.",
+    "type": "non-veg",
+    "popular": true
+  },
+  {
+    "id": "burger-paneer",
+    "name": "Spicy Paneer Burger",
+    "category": "Burgers",
+    "price": 230,
+    "description": "Crispy paneer patty, fresh veggies, cheese and spicy mayo.",
+    "type": "veg",
+    "popular": false
+  },
+  {
+    "id": "coffee-cappuccino",
+    "name": "Classic Cappuccino",
+    "category": "Coffee & Beverages",
+    "subCategory": "Hot Coffee",
+    "price": 150,
+    "description": "Rich espresso topped with steamed milk and silky foam.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "coffee-spanish-latte",
+    "name": "Spanish Latte",
+    "category": "Coffee & Beverages",
+    "subCategory": "Cold Coffee",
+    "price": 190,
+    "description": "Chilled espresso with creamy milk and condensed milk sweetness.",
+    "type": "veg",
+    "popular": true
+  },
+  {
+    "id": "drink-virgin-mojito",
+    "name": "Virgin Mojito",
+    "category": "Coffee & Beverages",
+    "subCategory": "Mocktails",
+    "price": 160,
+    "description": "Mint, lime and soda served chilled for a refreshing cafe drink.",
+    "type": "veg",
+    "popular": false
+  },
+  {
+    "id": "dessert-choco-waffle",
+    "name": "Chocolate Waffle with Ice Cream",
+    "category": "Coffee & Beverages",
+    "subCategory": "Desserts",
+    "price": 220,
+    "description": "Warm waffle topped with chocolate sauce, ice cream and crunchy sprinkles.",
+    "type": "veg",
+    "popular": true
+  }
+]
