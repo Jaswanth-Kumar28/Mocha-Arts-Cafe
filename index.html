@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mocha Art Cafe - Refined. Roasted. Remarkable. Experience premium coffee, artisan food, sip & paint workshops, and cozy co-working spaces. Book your table today.">
+  <meta name="keywords" content="Mocha Art Cafe, Cafe, Coffee Shop, Sip and Paint, Co-working space, Birthday Parties, Coffee Hyderabad, Premium Cafe">
+  <meta name="author" content="Mocha Art Cafe">
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Mocha Art Cafe - Refined. Roasted. Remarkable.">
+  <meta property="og:description" content="Enjoy an elegant coffee-themed atmosphere filled with art, culture, and exquisite dining.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mochaartcafe.com">
+  
+  <title>Mocha Art Cafe | Refined. Roasted. Remarkable.</title>
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Theme CSS Links -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header">
+    <div class="container">
+      <a href="#home" class="logo" id="logo-link">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>Mocha Art Cafe</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#menu" class="nav-link" id="nav-menu-page">Menu</a></li>
+          <li><a href="#booking" class="nav-link" id="nav-booking">Book a Table</a></li>
+          <li><a href="#birthdays" class="nav-link" id="nav-birthdays">Birthdays</a></li>
+          <li><a href="#gallery" class="nav-link" id="nav-gallery">Gallery</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <!-- Light/Dark Mode Switcher -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        
+        <!-- Booking CTA -->
+        <a href="#booking" class="book-table-btn">Book Table</a>
+        
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars" id="menu-toggle-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN APP PAGES (SPA ARCHITECTURE)
+       ========================================== -->
+  <main id="app-content">
+
+    <!-- 1. HOME VIEW -->
+    <section id="home" class="page-section active">
+      <!-- Hero Banner -->
+      <div class="hero">
+        <div class="hero-bg" style="background-image: url('assets/hero.png');"></div>
+        <div class="container">
+          <div class="steam-container">
+            <span class="steam-line"></span>
+            <span class="steam-line"></span>
+            <span class="steam-line"></span>
+          </div>
+          <p class="hero-tagline">Refined. Roasted. Remarkable.</p>
+          <h1>Welcome to Mocha Art Cafe</h1>
+          <p class="hero-sub">“Every Bite & Sip Has a Story”</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">View Menu</a>
+            <a href="#booking" class="btn btn-secondary">Book a Table</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div class="about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-img-col">
+              <div class="about-img-container">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe interior and artistic vibe">
+              </div>
+            </div>
+            <div class="about-content">
+              <span class="section-tag">Our Story</span>
+              <h3>Where Coffee Meets Fine Art</h3>
+              <p>Mocha Art Cafe is more than a destination; it's a creative sanctuary. Born out of a deep passion for single-origin roasting and contemporary canvas creations, we offer a cozy refuge for coffee connoisseurs and art enthusiasts alike.</p>
+              <p>Every beverage we brew is prepared with precision from select high-altitude Arabica beans. Around you, the walls display work from talented local artists, creating an aesthetic atmosphere that inspires conversation and reflection.</p>
+              
+              <div class="about-stats">
+                <div class="stat-item">
+                  <span class="stat-num">100%</span>
+                  <span class="stat-label">Artisan Beans</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">500+</span>
+                  <span class="stat-label">Artworks Hosted</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us Grid -->
+      <div class="why-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Craftsmanship</span>
+            <h2>Why Choose Mocha Art Cafe</h2>
+            <p>We combine culinary arts with visual arts to create a truly premium, sensory experience.</p>
+          </div>
+          
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-mug-hot"></i></div>
+              <h3>Specialty Brews</h3>
+              <p>Single-origin roasts, signature lattes, and custom slow drips designed for true coffee lovers.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-palette"></i></div>
+              <h3>Art & Culture Vibe</h3>
+              <p>Surround yourself with inspiring canvases, paintings, and active gallery events.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-utensils"></i></div>
+              <h3>Gourmet Kitchen</h3>
+              <p>An extensive culinary menu prepared fresh daily, from spicy starters to artisan desserts.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-wifi"></i></div>
+              <h3>Creator Friendly</h3>
+              <p>Equipped with charging ports, high-speed Wi-Fi, and quiet spaces for productive co-working.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity/Experience Highlights -->
+      <div class="experience-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Unwind & Create</span>
+            <h2>Unique Cafe Experiences</h2>
+            <p>Take part in our curated weekly routines designed to blend leisure, learning, and celebration.</p>
+          </div>
+          
+          <div class="exp-grid">
+            <!-- Experience 1: Sip & Paint -->
+            <div class="exp-row">
+              <div class="exp-img-col">
+                <img src="assets/paint.png" alt="Sip and Paint Canvas Session">
+              </div>
+              <div class="exp-text-col">
+                <span class="section-tag">Weekly Highlight</span>
+                <h3>Sip & Paint Experience</h3>
+                <p>Unlock your inner artist while sipping on custom lattes. Our weekly guided painting workshops provide all materials—canvas, paints, brushes—along with complimentary unlimited signature beverages. Led by renowned local artists, it's the perfect evening for couples, friends, or solo creators.</p>
+                <ul class="exp-features">
+                  <li><i class="fa-solid fa-check"></i> Guided instruction (all skill levels welcome)</li>
+                  <li><i class="fa-solid fa-check"></i> Canvas, colors, and easel provided</li>
+                  <li><i class="fa-solid fa-check"></i> Complimentary signature coffees & beverages</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Inquire Schedule</a>
+              </div>
+            </div>
+
+            <!-- Experience 2: Co-Working -->
+            <div class="exp-row reverse">
+              <div class="exp-img-col">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Cafe Co-working Zone">
+              </div>
+              <div class="exp-text-col">
+                <span class="section-tag">Creative Space</span>
+                <h3>Cafe Co-Working Space</h3>
+                <p>Need a workspace that inspires? Our dedicated co-working zone is designed for freelancers, remote workers, and designers. With high-speed gigabit Wi-Fi, multiple electrical outlets at every seat, and noise-dampening acoustic dividers, your productivity will soar.</p>
+                <ul class="exp-features">
+                  <li><i class="fa-solid fa-check"></i> Ultra high-speed fiber internet connection</li>
+                  <li><i class="fa-solid fa-check"></i> Accessible power outlets at every desk</li>
+                  <li><i class="fa-solid fa-check"></i> Special monthly co-working coffee subscriptions</li>
+                </ul>
+                <a href="#booking" class="btn btn-secondary">Reserve Desk</a>
+              </div>
+            </div>
+
+            <!-- Experience 3: Art Events -->
+            <div class="exp-row">
+              <div class="exp-img-col">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=800" alt="Art events open mic poetry">
+              </div>
+              <div class="exp-text-col">
+                <span class="section-tag">Art & Community</span>
+                <h3>Art & Culture Events</h3>
+                <p>From poetry slams and acoustic open-mic nights to guest speaker artist panels, Mocha Art Cafe is a bustling hub for community culture. Check our monthly calendar to see who is performing next, or submit an entry to showcase your own talent on our community stage.</p>
+                <ul class="exp-features">
+                  <li><i class="fa-solid fa-check"></i> Acoustic live music sets on weekends</li>
+                  <li><i class="fa-solid fa-check"></i> Poetry reading & stand-up open mics</li>
+                  <li><i class="fa-solid fa-check"></i> New artist galleries launched monthly</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">View Calendar</a>
+              </div>
+            </div>
+
+            <!-- Experience 4: Birthday Celebrations -->
+            <div class="exp-row reverse">
+              <div class="exp-img-col">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=800" alt="Birthday Celebrations at Mocha Art Cafe">
+              </div>
+              <div class="exp-text-col">
+                <span class="section-tag">Aesthetic Celebrations</span>
+                <h3>Birthday Celebrations</h3>
+                <p>Host an unforgettable birthday in our artistic sanctuary. We offer private seating zones, customized decoration setups, custom cake designs, and delicious food and beverage packages. Our photography-friendly backdrops ensure your memories are captured beautifully.</p>
+                <ul class="exp-features">
+                  <li><i class="fa-solid fa-check"></i> Cozy private dining and mezzanine options</li>
+                  <li><i class="fa-solid fa-check"></i> Custom themed balloon & floral decorations</li>
+                  <li><i class="fa-solid fa-check"></i> Curated food platters and mocktail towers</li>
+                </ul>
+                <a href="#birthdays" class="btn btn-secondary">Explore Packages</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Guest Reviews</span>
+            <h2>What Our Community Says</h2>
+          </div>
+          
+          <div class="testimonials-carousel" id="testimonials-carousel">
+            <div class="testimonial-track" id="testimonial-track">
+              <!-- Slide 1 -->
+              <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <p class="testimonial-text">"Mocha Art Cafe has become my second home. The Spanish Latte is out of this world, and the artistic energy is so inspiring for my design work. A true gem!"</p>
+                <div class="client-info">
+                  <h4>Ananya Sharma</h4>
+                  <span>Graphic Designer</span>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <p class="testimonial-text">"We hosted our daughter's birthday party here. The customizable decoration support, photography-friendly setups, and the food packages were fantastic. Highly recommended!"</p>
+                <div class="client-info">
+                  <h4>Rohan Mehta</h4>
+                  <span>Parent / Entrepreneur</span>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <p class="testimonial-text">"The Sip & Paint session is the absolute highlight of my week. Great vibes, amazing coffee, and I get to take home a canvas that I painted myself!"</p>
+                <div class="client-info">
+                  <h4>Priya Patel</h4>
+                  <span>Artist Hobbyist</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Dynamic Carousel Dots -->
+            <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram Showcase Grid -->
+      <div class="about-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Social Media</span>
+            <h2>Vibe Check on Instagram</h2>
+            <p>Tag us in your stories at <a href="https://instagram.com/mochaartcafe9" target="_blank" style="color: var(--accent-color); font-weight:600;">@mochaartcafe9</a> for a chance to be featured!</p>
+          </div>
+          
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600" alt="Espresso extraction closeup">
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="gallery-tag">1.2k Likes</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600" alt="Latte art on coffee table">
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="gallery-tag">980 Likes</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600" alt="People laughing in cafe">
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="gallery-tag">2.4k Likes</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600" alt="Beautifully prepared waffles">
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="gallery-tag">1.5k Likes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MENU VIEW -->
+    <section id="menu" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fine Dining</span>
+          <h2>Our Culinary Menu</h2>
+          <p>Explore our wide selection of gourmet plates, starters, and signature beverages.</p>
+        </div>
+        
+        <!-- Search & Filters -->
+        <div class="menu-controls">
+          <div class="search-box-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="menu-search" class="search-input" placeholder="Search your favorite sip or bite...">
+          </div>
+          
+          <!-- Veg/Non-Veg and Sorting Controls -->
+          <div class="menu-extra-controls">
+            <div class="diet-filter-container">
+              <span class="control-label">Dietary:</span>
+              <div class="diet-toggle-group" id="diet-filter-group">
+                <button class="diet-toggle-btn active" data-diet="all">All</button>
+                <button class="diet-toggle-btn veg" data-diet="veg">
+                  <span class="diet-indicator"></span> Veg
+                </button>
+                <button class="diet-toggle-btn non-veg" data-diet="non-veg">
+                  <span class="diet-indicator"></span> Non-Veg
+                </button>
+              </div>
+            </div>
+            
+            <div class="sort-container">
+              <span class="control-label">Sort By:</span>
+              <div class="select-wrapper">
+                <select id="menu-price-sort" class="sort-select">
+                  <option value="default" selected>Recommended</option>
+                  <option value="low-to-high">Price: Low to High</option>
+                  <option value="high-to-low">Price: High to Low</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Category list populated by JS -->
+          <div class="category-filters" id="category-chips">
+            <!-- Chips injected by JS -->
+          </div>
+
+          <!-- Subcategory list (toggled only on Coffee & Beverages) -->
+          <div class="submenu-filters" id="submenu-chips">
+            <!-- Submenu chips injected by JS -->
+          </div>
+        </div>
+        
+        <!-- Menu Grid Container -->
+        <div class="menu-grid" id="menu-grid-container">
+          <!-- Menu Cards will be dynamically injected here by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TABLE BOOKING VIEW -->
+    <section id="booking" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Reservations</span>
+          <h2>Book Your Table</h2>
+          <p>Avoid the queue and reserve a cozy spot for your coffee sessions.</p>
+        </div>
+        
+        <div class="booking-container">
+          <!-- Information Column -->
+          <div class="info-sidebar">
+            <h3>Plan Your Visit</h3>
+            <p>Please reserve at least 2 hours in advance. For group bookings larger than 12 guests, contact our events manager directly by phone.</p>
+            
+            <ul class="contact-bullets">
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Call Us Directly</strong>
+                  <p>+91 75690 87801</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>Email Inquiries</strong>
+                  <p>mochaartcafe.9@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <strong>Hours of Brewing</strong>
+                  <p>Monday - Sunday: 11:00 AM - 11:00 PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Form Column -->
+          <div class="form-wrapper">
+            <form id="booking-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group span-2">
+                  <label for="book-name">Customer Name *</label>
+                  <input type="text" id="book-name" class="form-control" placeholder="E.g., Rohan Sharma" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="book-phone">Mobile Number *</label>
+                  <input type="tel" id="book-phone" class="form-control" placeholder="E.g., +91 99999 88888" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="book-email">Email Address</label>
+                  <input type="email" id="book-email" class="form-control" placeholder="E.g., rohan@example.com">
+                </div>
+                
+                <div class="form-group">
+                  <label for="book-date">Reservation Date *</label>
+                  <input type="date" id="book-date" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="book-time">Preferred Time *</label>
+                  <select id="book-time" class="form-control" required>
+                    <option value="">Select Time</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                    <option value="05:00 PM">05:00 PM</option>
+                    <option value="06:00 PM">06:00 PM</option>
+                    <option value="07:00 PM">07:00 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                    <option value="09:00 PM">09:00 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                  </select>
+                </div>
+                
+                <div class="form-group span-2">
+                  <label for="book-guests">Number of Guests *</label>
+                  <select id="book-guests" class="form-control" required>
+                    <option value="1 Guest">1 Guest</option>
+                    <option value="2 Guests" selected>2 Guests</option>
+                    <option value="3 Guests">3 Guests</option>
+                    <option value="4 Guests">4 Guests</option>
+                    <option value="5-6 Guests">5-6 Guests</option>
+                    <option value="7-10 Guests">7-10 Guests</option>
+                    <option value="10+ Guests">10+ Guests (Group booking)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group span-2">
+                  <label for="book-zone">Preferred Seating Zone *</label>
+                  <select id="book-zone" class="form-control" required>
+                    <option value="Main Art Gallery Hall" selected>Main Art Gallery Hall (Vibrant, surrounded by paintings)</option>
+                    <option value="Espresso Mezzanine">Espresso Mezzanine (Quiet co-working, fiber Wi-Fi)</option>
+                    <option value="Garden Balcony">Garden Balcony (Open-air, plant-filled cozy seating)</option>
+                    <option value="Private Cabins">Private Dining Cabins (Perfect for small groups)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group span-2">
+                  <label for="book-requests">Special Requests / Occasion</label>
+                  <textarea id="book-requests" class="form-control" placeholder="E.g., Birthday, window seat, high chair..."></textarea>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Reserve Your Table</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BIRTHDAY CELEBRATIONS VIEW -->
+    <section id="birthdays" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Celebrate</span>
+          <h2>Birthday Party Celebrations</h2>
+          <p>Make your special day memorable with premium themes, food arrays, and cozy private setups.</p>
+        </div>
+        
+        <!-- Birthday Packages -->
+        <div class="packages-grid">
+          <!-- Package 1 -->
+          <div class="package-card">
+            <h3>Mocha Lounge</h3>
+            <div class="package-price">₹499<span> / guest</span></div>
+            <ul class="package-features">
+              <li><i class="fa-solid fa-check"></i> Private cabin seating area</li>
+              <li><i class="fa-solid fa-check"></i> Standard theme balloon setup</li>
+              <li><i class="fa-solid fa-check"></i> Starter, Main Course & Drink menu</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated server assistance</li>
+              <li><i class="fa-solid fa-check"></i> Background birthday music</li>
+            </ul>
+            <button type="button" class="btn btn-secondary select-package-card-btn" data-pkg-val="Mocha Lounge (₹499/guest)">Select Plan</button>
+          </div>
+          
+          <!-- Package 2 (Featured) -->
+          <div class="package-card featured">
+            <span class="package-badge">Popular Choice</span>
+            <h3>Arty Celebration</h3>
+            <div class="package-price">₹799<span> / guest</span></div>
+            <ul class="package-features">
+              <li><i class="fa-solid fa-check"></i> Private dining cabin & canvas display</li>
+              <li><i class="fa-solid fa-check"></i> Premium customized floral/art decorations</li>
+              <li><i class="fa-solid fa-check"></i> Cake Arrangement assistance</li>
+              <li><i class="fa-solid fa-check"></i> Multi-course gourmet food & mocktail bar</li>
+              <li><i class="fa-solid fa-check"></i> Photography friendly aesthetic setup</li>
+              <li><i class="fa-solid fa-check"></i> Mini canvas souvenir for guests</li>
+            </ul>
+            <button type="button" class="btn btn-primary select-package-card-btn" data-pkg-val="Arty Celebration (₹799/guest)">Select Plan</button>
+          </div>
+          
+          <!-- Package 3 -->
+          <div class="package-card">
+            <h3>Espresso Gala</h3>
+            <div class="package-price">₹1,199<span> / guest</span></div>
+            <ul class="package-features">
+              <li><i class="fa-solid fa-check"></i> Exclusive full mezzanine cafe takeover</li>
+              <li><i class="fa-solid fa-check"></i> High-end luxury customized theme setup</li>
+              <li><i class="fa-solid fa-check"></i> Complimentary custom birthday fudge cake</li>
+              <li><i class="fa-solid fa-check"></i> Signature unlimited coffee & live Mocktail counter</li>
+              <li><i class="fa-solid fa-check"></i> Professional photographer (2 hrs)</li>
+              <li><i class="fa-solid fa-check"></i> Live musical open-mic stage support</li>
+            </ul>
+            <button type="button" class="btn btn-secondary select-package-card-btn" data-pkg-val="Espresso Gala (₹1,199/guest)">Select Plan</button>
+          </div>
+        </div>
+
+        <!-- Celebration Services & Cost Estimator Grid -->
+        <div class="estimator-features-grid">
+          <!-- Left: Services list -->
+          <div class="services-list-wrapper">
+            <h3>Celebration Services Included</h3>
+            <p>Every private gathering at Mocha Art Cafe includes these core premium features to make your celebration memorable:</p>
+            <div class="services-subgrid">
+              <div class="service-item">
+                <div class="service-icon"><i class="fa-solid fa-chair"></i></div>
+                <div class="service-text">
+                  <h4>Private Seating</h4>
+                  <p>Cozy semi-private cabins or full mezzanine takeovers based on group size.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
+                <div class="service-text">
+                  <h4>Customized Decorations</h4>
+                  <p>Balloon arches, dynamic fairy lights, and themed art easel displays.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fa-solid fa-cake-candles service-icon"></i>
+                <div class="service-text">
+                  <h4>Cake Arrangement</h4>
+                  <p>Cake arrangement assistance (themed chocolate fudge or red velvet cakes).</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fa-solid fa-utensils service-icon"></i>
+                <div class="service-text">
+                  <h4>Food & Beverage Packages</h4>
+                  <p>Artisan starter platters, main courses, and signature coffee arrays.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fa-solid fa-camera-retro service-icon"></i>
+                <div class="service-text">
+                  <h4>Photography Friendly Setup</h4>
+                  <p>Aesthetic photo backdrops, ring lights, and art gallery framing.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fa-solid fa-users service-icon"></i>
+                <div class="service-text">
+                  <h4>Group Reservations</h4>
+                  <p>Exclusive space planning for groups from 5 to 50+ guests.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Calculator -->
+          <div class="calculator-wrapper">
+            <h3>Party Cost Estimator</h3>
+            <p>Select a package and drag the slider to estimate your total package price.</p>
+            
+            <div class="calc-group">
+              <label class="calc-label">Select Package Plan:</label>
+              <div class="calc-options" id="calc-packages">
+                <button type="button" class="calc-btn active" data-price="499" data-pkg="Mocha Lounge">
+                  <span class="pkg-title">Mocha Lounge</span>
+                  <span class="pkg-rate">₹499/guest</span>
+                </button>
+                <button type="button" class="calc-btn" data-price="799" data-pkg="Arty Celebration">
+                  <span class="pkg-title">Arty Celebration</span>
+                  <span class="pkg-rate">₹799/guest</span>
+                </button>
+                <button type="button" class="calc-btn" data-price="1199" data-pkg="Espresso Gala">
+                  <span class="pkg-title">Espresso Gala</span>
+                  <span class="pkg-rate">₹1,199/guest</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <div class="calc-slider-header">
+                <label class="calc-label" for="guest-range">Number of Guests:</label>
+                <span id="guest-count-badge">15 Guests</span>
+              </div>
+              <input type="range" id="guest-range" min="5" max="50" value="15" class="range-slider">
+              <div class="slider-markers">
+                <span>5</span>
+                <span>15</span>
+                <span>25</span>
+                <span>35</span>
+                <span>50</span>
+              </div>
+            </div>
+
+            <div class="calc-summary">
+              <div class="summary-row">
+                <span>Package Base Rate:</span>
+                <span id="summary-rate" class="highlight-val">₹499 / guest</span>
+              </div>
+              <div class="summary-row">
+                <span>Decoration Fee:</span>
+                <span class="highlight-val success-val">Included (Free)</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-row total">
+                <span>Estimated Total Cost:</span>
+                <span id="summary-total">₹7,485</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="apply-calc-btn" style="width: 100%;">
+              Plan My Celebration with This Plan
+            </button>
+          </div>
+        </div>
+        
+        <!-- Inquiry Form -->
+        <div class="birthday-container" id="birthday-inquiry-section">
+          <div class="info-sidebar">
+            <h3>Book Your Private Event</h3>
+            <p>Fill out our short celebration inquiry planner. Our events co-ordinator will reach out within 24 hours to design customized decoration elements, verify menu choices, and finalize booking details.</p>
+            <ul class="contact-bullets">
+              <li><i class="fa-solid fa-cake-candles"></i> Custom Cake Sourcing</li>
+              <li><i class="fa-solid fa-camera"></i> Photography Friendly Interiors</li>
+              <li><i class="fa-solid fa-music"></i> Live Music & MIC Integrations</li>
+            </ul>
+          </div>
+          
+          <div class="form-wrapper">
+            <form id="birthday-form">
+              <div class="form-grid">
+                <div class="form-group span-2">
+                  <label for="bday-name">Contact Name *</label>
+                  <input type="text" id="bday-name" class="form-control" placeholder="E.g., Kiara Advani" required>
+                </div>
+                <div class="form-group">
+                  <label for="bday-phone">Phone Number *</label>
+                  <input type="tel" id="bday-phone" class="form-control" placeholder="E.g., +91 99999 77777" required>
+                </div>
+                <div class="form-group">
+                  <label for="bday-date">Date of Celebration *</label>
+                  <input type="date" id="bday-date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="bday-package">Selected Package Plan *</label>
+                  <select id="bday-package" class="form-control" required>
+                    <option value="Mocha Lounge (₹499/guest)" selected>Mocha Lounge (₹499 / guest)</option>
+                    <option value="Arty Celebration (₹799/guest)">Arty Celebration (₹799 / guest)</option>
+                    <option value="Espresso Gala (₹1,199/guest)">Espresso Gala (₹1,199 / guest)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bday-guests">Estimated Number of Guests *</label>
+                  <select id="bday-guests" class="form-control" required>
+                    <option value="5-10 Guests">5 to 10 Guests</option>
+                    <option value="11-20 Guests" selected>11 to 20 Guests</option>
+                    <option value="21-30 Guests">21 to 30 Guests</option>
+                    <option value="31-50 Guests">31 to 50 Guests</option>
+                    <option value="50+ Guests">More than 50 Guests</option>
+                  </select>
+                </div>
+                <div class="form-group span-2">
+                  <label for="bday-req">Requirements & Cake Theme</label>
+                  <textarea id="bday-req" class="form-control" placeholder="Share your theme preferences, decoration requirements, dietary requests, etc."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Plan My Celebration</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GALLERY VIEW -->
+    <section id="gallery" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Aesthetic Corner</span>
+          <h2>Our Photo Gallery</h2>
+          <p>Get a visual taste of our artisan plates, curated coffee, and elegant cafe interiors.</p>
+        </div>
+        
+        <!-- Gallery Category Tabs -->
+        <div class="gallery-filter-tabs">
+          <button class="gallery-tab-btn active" data-gallery-filter="all">All Photos</button>
+          <button class="gallery-tab-btn" data-gallery-filter="cafe-vibe">Cafe Vibe</button>
+          <button class="gallery-tab-btn" data-gallery-filter="gourmet-plates">Gourmet Plates</button>
+          <button class="gallery-tab-btn" data-gallery-filter="art-workshops">Art & Workshops</button>
+        </div>
+
+        <!-- Large Masonry-like Grid -->
+        <div class="gallery-grid" id="gallery-grid-container">
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800" alt="Pouring hot espresso shot">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Craft Coffee</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="cafe-vibe">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Beautiful Cafe Indoor Seating">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Cozy Spaces</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="art-workshops">
+            <img src="assets/paint.png" alt="Weekly Sip and Paint easel setup">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Sip & Paint</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800" alt="Fresh White Sauce Penne Pasta">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Artisan Pasta</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="assets/latte.png" alt="Beautifully poured Latte Art">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Latte Art</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800" alt="Premium Cheddar Chicken Burger">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Gourmet Burgers</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="cafe-vibe">
+            <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800" alt="Cozy Cafe interior wood design theme">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Espresso Vibe</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="art-workshops">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=800" alt="Live acoustic evening performance">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Acoustic Evenings</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800" alt="Sweet Chocolate Waffle with Icecream">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Decadent Sweets</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="gourmet-plates">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800" alt="Chilled Virgin Mojito Cocktail">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Exotic Drinks</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="art-workshops">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=800" alt="Abstract painting canvas details">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Art Displays</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="cafe-vibe">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800" alt="Cafe evening exterior design">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-tag">Cafe Front</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT VIEW -->
+    <section id="contact" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Locate Us</span>
+          <h2>Contact Mocha Art Cafe</h2>
+          <p>Get in touch, drop a message, or find directions to our coffee house.</p>
+        </div>
+        
+        <div class="contact-container">
+          <!-- Contact Details Card -->
+          <div class="contact-card-info">
+            <h3>Mocha Art Cafe</h3>
+            <p class="contact-tagline">Refined. Roasted. Remarkable.</p>
+            
+            <ul class="contact-bullets" style="margin-bottom: 30px;">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Address</strong>
+                  <p>Plot No. 9, Art District Lane, Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+91 75690 87801</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <p>mochaartcafe.9@gmail.com</p>
+                </div>
+              </li>
+            </ul>
+            
+            <!-- CTA Action buttons -->
+            <div style="display: flex; flex-direction:column; gap: 12px; margin-top:20px;">
+              <a href="https://wa.me/917569087801" target="_blank" class="btn btn-secondary" style="border-color: #25d366; color: #25d366; background: rgba(37,211,102,0.05);">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+              
+              <a href="https://instagram.com/mochaartcafe9" target="_blank" class="btn btn-secondary" style="border-color: #e1306c; color: #e1306c; background: rgba(225,48,108,0.05);">
+                <i class="fa-brands fa-instagram"></i> Follow on Instagram
+              </a>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://instagram.com/mochaartcafe9" target="_blank" class="social-icon" aria-label="Instagram Page"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://wa.me/917569087801" target="_blank" class="social-icon" aria-label="WhatsApp Link"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" class="social-icon" aria-label="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <!-- Contact message form -->
+          <div class="form-wrapper">
+            <h3 style="margin-bottom: 24px; font-family: var(--font-serif);">Write to Us</h3>
+            
+            <form id="contact-form">
+              <div class="form-grid full-width">
+                <div class="form-group">
+                  <label for="contact-name">Your Name *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="E.g., Aditi Rao" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contact-email">Email Address *</label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="E.g., aditi@gmail.com" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contact-msg">Message *</label>
+                  <textarea id="contact-msg" class="form-control" placeholder="Write your thoughts or inquiry details here..." required></textarea>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:20px;">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion Section -->
+        <div class="faq-section">
+          <div class="section-header">
+            <span class="section-tag">Common Inquiries</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Find quick answers about reservations, activities, and facilities at our cafe.</p>
+          </div>
+
+          <div class="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Do I need to pay or pre-book for the Sip & Paint sessions?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>Yes, our Sip & Paint workshops happen weekly (usually Friday and Saturday evenings) and require pre-registration since seats are limited to 20 guests per session. The session fee covers all materials (easel, canvas, brushes, acrylics) plus unlimited signature coffees and desserts. You can inquire about timings and reserve via our Birthday/Event form or directly on WhatsApp.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is parking available at Mocha Art Cafe?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>Absolutely. We offer free basement parking for cars and two-wheelers, along with a dedicated valet parking service during peak weekend evening hours (6:00 PM to 11:00 PM).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are pets allowed in the cafe?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>Yes, Mocha Art Cafe is pet-friendly! Pets are welcome in our spacious Garden Balcony zone. We request keeping them on a leash and being mindful of other guests. We also have a special pet water station set up in the balcony.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are there extra charges to use the Cafe Co-Working Space?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>No, there are no hourly desk fees for working in our Espresso Mezzanine. It is open to all cafe patrons. We only require a minimum order of one beverage or dish for every 2 hours of seating. We also offer monthly co-working coffee subscriptions that include daily unlimited drip coffees at special discounted rates.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can I customize the menu packages for birthday celebrations?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>Yes, all our party packages (Mocha Lounge, Arty, Espresso Gala) are fully customizable. You can swap dishes, adjust spice levels, request vegan/gluten-free variants, or add a custom mocktail tower. Get in touch with our event planner via the inquiry form above to tailor the menu exactly to your needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Section -->
+        <div class="map-container">
+          <!-- Elegant Map using standard Leaflet/OSM base or stylized Google Map. Using a clean OpenStreetMap embed representation -->
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=78.3970%2C17.4200%2C78.4180%2C17.4350&amp;layer=mapnik&amp;marker=17.4255%2C78.4124" 
+            title="Mocha Art Cafe OpenStreetMap Location Grid">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Mocha Art Cafe</span>
+          </div>
+          <p class="footer-desc">Refined. Roasted. Remarkable. Bringing together single-origin brews and exquisite artworks in a cozy, welcoming sanctuary.</p>
+          <div class="social-links" style="margin-top: 10px;">
+            <a href="https://instagram.com/mochaartcafe9" target="_blank" class="social-icon" style="width:40px; height:40px; font-size:1rem;" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/917569087801" target="_blank" class="social-icon" style="width:40px; height:40px; font-size:1rem;" aria-label="WhatsApp Link"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:mochaartcafe.9@gmail.com" class="social-icon" style="width:40px; height:40px; font-size:1rem;" aria-label="Email Link"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        
+        <!-- Navigation links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Culinary Menu</a></li>
+            <li><a href="#booking">Book a Table</a></li>
+            <li><a href="#birthdays">Birthday Planner</a></li>
+            <li><a href="#gallery">Art Gallery</a></li>
+            <li><a href="#contact">Find Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Quick contact -->
+        <div class="footer-col">
+          <h4>Quick Contact</h4>
+          <ul class="footer-links">
+            <li><span style="color: var(--text-muted);"><i class="fa-solid fa-phone" style="color: var(--accent-color); margin-right: 8px;"></i> +91 75690 87801</span></li>
+            <li><span style="color: var(--text-muted);"><i class="fa-solid fa-envelope" style="color: var(--accent-color); margin-right: 8px;"></i> mochaartcafe.9@gmail.com</span></li>
+            <li><span style="color: var(--text-muted);"><i class="fa-solid fa-location-dot" style="color: var(--accent-color); margin-right: 8px;"></i> Jubilee Hills, Hyderabad</span></li>
+          </ul>
+        </div>
+        
+        <!-- Hours -->
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="opening-hours">
+            <p>Monday - Friday <span>11:00 AM - 11:00 PM</span></p>
+            <p>Saturday <span>11:00 AM - Midnight</span></p>
+            <p>Sunday <span>11:00 AM - 11:00 PM</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mocha Art Cafe. All Rights Reserved. Designed with Cozy, Coffee-Inspired Aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       FLOATING ACTIONS & MODALS
+       ========================================== -->
+  
+  <!-- Floating WhatsApp Chat Indicator -->
+  <a href="https://wa.me/917569087801?text=Hi%20Mocha%20Art%20Cafe,%20I'd%20like%20to%20inquire%20about%20making%20a%20booking." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     aria-label="Direct WhatsApp Contact">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  
+  <!-- Lightbox Modal for Gallery Images -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Previous Image">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <img src="" alt="" class="lightbox-content" id="lightbox-img">
+    <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Next Image">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+  
+  <!-- Success Confirmation Modal -->
+  <div class="modal-overlay" id="success-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3>Success Title</h3>
+      <p id="modal-body-text">Feedback validation details.</p>
+      <button class="btn btn-primary" id="modal-close-btn" style="padding: 10px 24px; font-size:0.9rem;">Close</button>
+    </div>
+  </div>
+
+  <!-- Loading scripts -->
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
