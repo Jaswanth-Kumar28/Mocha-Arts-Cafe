@@ -163,12 +163,6 @@ function HomePage({ goToPage }) {
         <Feature icon="💻" title="Creator Friendly" text="A calm co-working setup with Wi-Fi, charging points and cozy seating." />
       </div>
 
-      <SectionIntro eyebrow="Guest Reviews" title="What Our Community Says" />
-      <div className="container reviews">
-        <Review text="The Spanish Latte is amazing and the cafe vibe is perfect for work and photos." name="Ananya Sharma" role="Graphic Designer" />
-        <Review text="We hosted a birthday here. The setup, food and service were very impressive." name="Rohan Mehta" role="Parent / Entrepreneur" />
-        <Review text="The Sip & Paint experience is the best weekend activity with friends." name="Priya Patel" role="Artist Hobbyist" />
-      </div>
     </section>
   );
 }
@@ -523,16 +517,6 @@ function Feature({ icon, title, text }) {
       <span>{icon}</span>
       <h3>{title}</h3>
       <p>{text}</p>
-    </div>
-  );
-}
-
-function Review({ text, name, role }) {
-  return (
-    <div className="review-card">
-      <p>“{text}”</p>
-      <h4>{name}</h4>
-      <span>{role}</span>
     </div>
   );
 }
