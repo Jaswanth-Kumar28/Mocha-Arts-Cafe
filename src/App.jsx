@@ -90,6 +90,7 @@ function SafeImage({ src, fallback, alt, className, style, onClick }) {
 }
 
 function App() {
+  const [lightboxItem, setLightboxItem] = useState(null);
   const [activePage, setActivePage] = useState("home");
   const [isLight, setIsLight] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
