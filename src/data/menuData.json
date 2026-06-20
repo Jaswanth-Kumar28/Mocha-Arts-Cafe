@@ -57,7 +57,7 @@
     "description": "Toasted bread with garlic butter, mozzarella and Italian herbs.",
     "type": "veg",
     "popular": true,
-    "image": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&q=80&w=600"
+    "image": "/images/cheesy-garlic-bread.png"
   },
   {
     "id": "bb-paneer-burrito",
