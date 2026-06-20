@@ -592,6 +592,16 @@ function Feature({ icon, title, text }) {
   );
 }
 
+function Review({ text, name, role }) {
+  return (
+    <div className="review-card">
+      <p>"{text}"</p>
+      <h4>{name}</h4>
+      <span>{role}</span>
+    </div>
+  );
+}
+
 function PriceCard({ title, price, items, highlighted = false }) {
   return (
     <div className={highlighted ? "price-card highlighted" : "price-card"}>
