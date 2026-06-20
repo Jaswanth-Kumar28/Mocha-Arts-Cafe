@@ -226,13 +226,6 @@ function HomePage({ goToPage }) {
         <Feature icon="🍽" title="Gourmet Kitchen" text="Freshly prepared starters, pastas, pizzas, burgers and desserts." />
         <Feature icon="💡" title="Creator Friendly" text="A calm co-working setup with Wi-Fi, charging points and cozy seating." />
       </div>
-
-      <SectionIntro eyebrow="Guest Reviews" title="What Our Community Says" />
-      <div className="container reviews">
-        <Review text="The Spanish Latte is amazing and the cafe vibe is perfect for work and photos." name="Ananya Sharma" role="Graphic Designer" />
-        <Review text="We hosted a birthday here. The setup, food and service were very impressive." name="Rohan Mehta" role="Parent / Entrepreneur" />
-        <Review text="The Sip &amp; Paint experience is the best weekend activity with friends." name="Priya Patel" role="Artist Hobbyist" />
-      </div>
     </section>
   );
 }
