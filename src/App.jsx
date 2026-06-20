@@ -215,7 +215,7 @@ function HomePage({ goToPage }) {
           </div>
         </div>
         <div className="image-panel">
-          <img src="https://images.unsplash.com/photo-1507914464562-6ff4ac29692f?auto=format&fit=crop&q=80&w=1200" alt="Coffee and art" />
+          <img src="/images/mocha-cafe-balcony.jpg" alt="Mocha Arts Cafe balcony" />
         </div>
       </div>
 
