@@ -132,7 +132,6 @@ function App() {
       </main>
 
       <Footer goToPage={goToPage} />
-      <FloatingWhatsApp />
 
       {modal && <SuccessModal modal={modal} close={() => setModal(null)} />}
       {lightboxItem && <Lightbox item={lightboxItem} close={() => setLightboxItem(null)} />}
@@ -654,9 +653,6 @@ function Footer({ goToPage }) {
   );
 }
 
-function FloatingWhatsApp() {
-  return <a className="whatsapp-float" href="https://wa.me/917569087801" target="_blank" rel="noreferrer">☘</a>;
-}
 
 function SuccessModal({ modal, close }) {
   return (
