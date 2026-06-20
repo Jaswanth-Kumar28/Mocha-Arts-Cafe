@@ -177,7 +177,7 @@ function Header({ activePage, goToPage, isLight, setIsLight, mobileOpen, setMobi
 
 function HomePage({ goToPage }) {
   return (
-    <section className="page-section active">
+    <section className="page-section active page-padding">
       <div className="hero">
         <div className="container hero-grid">
           <div>
