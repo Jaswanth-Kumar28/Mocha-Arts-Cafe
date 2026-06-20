@@ -325,12 +325,13 @@ function MenuPage() {
 }
 
 function MenuCard({ item }) {
-  const image = imageMap[item.category] || imageMap["Coffee & Beverages"];
+  const image = item.image || imageMap[item.category] || imageMap["Coffee & Beverages"];
+  const fallback = imageMap[item.category] || imageMap["Coffee & Beverages"];
   const isVeg = item.type === "veg";
 
   return (
     <article className="menu-card">
-      <img src={image} alt={item.name} />
+      <SafeImage src={image} fallback={fallback} alt={item.name} />
       <div className="menu-card-body">
         <div className="badge-row">
           {item.popular && <span className="badge">Chef's Pick</span>}

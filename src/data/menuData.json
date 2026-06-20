@@ -6,7 +6,8 @@
     "price": 240,
     "description": "Crispy house-made corn tortilla chips layered with warm cheese sauce, jalapeños, pico de gallo and sour cream.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "starters-macho-chicken-fries",
@@ -15,7 +16,8 @@
     "price": 290,
     "description": "Golden fries topped with grilled chicken chunks, melted cheddar, smoky BBQ drizzle and green onions.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "starters-loaded-garden-fries",
@@ -24,7 +26,8 @@
     "price": 220,
     "description": "Crispy fries with cheese sauce, bell peppers, olives, corn and fresh herbs.",
     "type": "veg",
-    "popular": false
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "starters-butter-garlic-prawns",
@@ -33,7 +36,8 @@
     "price": 380,
     "description": "Plump prawns sautéed in butter garlic sauce with parsley and lemon.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "sides-cheese-corn-balls",
@@ -42,7 +46,8 @@
     "price": 180,
     "description": "Golden croquettes stuffed with sweet corn kernels and melted mozzarella.",
     "type": "veg",
-    "popular": false
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "sides-garlic-bread",
@@ -51,7 +56,8 @@
     "price": 160,
     "description": "Toasted bread with garlic butter, mozzarella and Italian herbs.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "bb-paneer-burrito",
@@ -60,7 +66,8 @@
     "price": 240,
     "description": "Flour tortilla wrap packed with grilled paneer, onions, peppers, rice and sour cream.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "bb-chicken-burrito-bowl",
@@ -69,7 +76,8 @@
     "price": 280,
     "description": "Grilled adobo chicken, rice, beans, corn salsa and shredded cheese over crisp lettuce.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "q-paneer-quesadilla",
@@ -78,7 +86,8 @@
     "price": 230,
     "description": "Tandoori paneer crumbles, onions and melting mozzarella in a golden tortilla.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "momos-chicken",
@@ -87,7 +96,8 @@
     "price": 180,
     "description": "Steamed or fried dumplings stuffed with seasoned minced chicken and scallions.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "momos-veg",
@@ -96,7 +106,8 @@
     "price": 150,
     "description": "Dumplings stuffed with cabbage, carrots, beans and ginger. Steamed or fried.",
     "type": "veg",
-    "popular": false
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1625220194771-7ebedd0b4a27?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "pizza-margherita",
@@ -105,7 +116,8 @@
     "price": 260,
     "description": "Fresh tomato sauce, mozzarella, basil and olive oil on a crisp base.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "pizza-bbq-chicken",
@@ -114,7 +126,8 @@
     "price": 340,
     "description": "Smoky BBQ chicken, onions, bell peppers and mozzarella cheese.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "pasta-white-sauce",
@@ -123,7 +136,8 @@
     "price": 250,
     "description": "Penne pasta tossed in creamy white sauce with herbs and vegetables.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "burger-chicken",
@@ -132,7 +146,8 @@
     "price": 280,
     "description": "Crispy chicken patty, cheddar, lettuce, tomato and signature cafe sauce.",
     "type": "non-veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "burger-paneer",
@@ -141,7 +156,8 @@
     "price": 230,
     "description": "Crispy paneer patty, fresh veggies, cheese and spicy mayo.",
     "type": "veg",
-    "popular": false
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "coffee-cappuccino",
@@ -151,7 +167,8 @@
     "price": 150,
     "description": "Rich espresso topped with steamed milk and silky foam.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "coffee-spanish-latte",
@@ -161,7 +178,8 @@
     "price": 190,
     "description": "Chilled espresso with creamy milk and condensed milk sweetness.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "drink-virgin-mojito",
@@ -171,7 +189,8 @@
     "price": 160,
     "description": "Mint, lime and soda served chilled for a refreshing cafe drink.",
     "type": "veg",
-    "popular": false
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": "dessert-choco-waffle",
@@ -181,6 +200,7 @@
     "price": 220,
     "description": "Warm waffle topped with chocolate sauce, ice cream and crunchy sprinkles.",
     "type": "veg",
-    "popular": true
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1562379784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=600"
   }
 ]
