@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import menuData from "./data/menuData.json";
 import {
   saveTableBooking,
-  saveBirthdayBooking,
-  saveContactMessage
+  saveBirthdayBooking
 } from "./services/firestoreService";
+import { sendContactMessage } from "./api";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -193,7 +193,7 @@ function HomePage({ goToPage }) {
           </div>
           <div className="hero-card">
             <img
-              src="/images/mocha-cafe-hero.jpg"
+              src="/images/mocha-cafe-hero.jpg?v=3"
               alt="Mocha Arts Cafe interior"
               className="hero-image"
             />
@@ -517,11 +517,11 @@ function ContactPage({ setModal }) {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      await saveContactMessage(data);
+      await sendContactMessage(data);
 
       setModal({
         title: "Message Sent!",
-        text: `Hello ${data.name}, your message has been saved. We will respond to your email at ${data.email} shortly.`
+        text: `Hello ${data.name}, your message has been sent successfully. We will respond to your email at ${data.email} shortly.`
       });
 
       form.reset();
@@ -556,6 +556,7 @@ function ContactPage({ setModal }) {
           <h3>Write to Us</h3>
           <input name="name" placeholder="Your Name *" required />
           <input name="email" type="email" placeholder="Email Address *" required />
+          <input name="phone" placeholder="Phone Number" />
           <textarea name="message" placeholder="Message *" required />
           <button className="primary-btn" type="submit">Send Message</button>
         </form>
