@@ -10,3 +10,8 @@ node_modules/
 dist/
 build/
 .env
+
+# Backend Ignores
+mocha-backend/node_modules/
+mocha-backend/.env
+mocha-backend/firebaseKey.json
